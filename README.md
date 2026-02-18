@@ -332,7 +332,7 @@ git push -u origin main
 
 ---
 
-### Daily Development Workflow
+### Daily Development Workflow (always follow)
 
 ```
 git pull
@@ -342,16 +342,6 @@ git push
 ```
 
 ---
-
-### Pro habit (always follow)
-
-```
-git pull
-edit files 
-git add .
-git commit -m "update"
-git push
-```
 
 ### Recommended `.gitignore`
 
