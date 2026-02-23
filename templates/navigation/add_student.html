@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}
+add students
+{% endblock  %}
+
+{% block content %}
+
+<h2>add students</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+  <label for="email">Email</label>
+  <input type="text" id="email" name="email" placeholder="Your email..">
+
+  <label for="dob">Date of Birth</label>
+  <input type="date" id="date" name="date">
+
+  <label for="gender">Gender</label>
+  <input type="radio" id="male" name="gender" value="male"> Male
+  <input type="radio" id="female" name="gender" value="female"> Female
+  
+  <br>
+  <br>
+  
+  <label for="image">Upload Your Picture</label>
+  <input type="file" id="image" name="image">
+
+  <label for="country">Country</label>
+  <select id="country" name="country">
+    <option value="australia">Australia</option>
+    <option value="canada">Canada</option>
+    <option value="usa">USA</option>
+  </select>
+
+  <label for="message">Your Feedback</label>
+  <textarea name="message" id="" placeholder="Write something..."></textarea>
+
+  
+  <input type="submit" value="Submit">
+</form>
+
+
+{% endblock  %}

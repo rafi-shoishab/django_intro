@@ -4,11 +4,11 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'navigation/index.html')
 
-def contact(request):
-    return render(request, 'navigation/contact.html')
+def add_student(request):
+    return render(request,'navigation/add_student.html')
 
-def news(request):
-    return render(request,'navigation/news.html')
+def all_students(request):
+    return render(request, 'navigation/all_students.html')
 
 def about(request):
     return render(request, 'navigation/about.html')

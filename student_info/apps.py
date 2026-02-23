@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class NavigationConfig(AppConfig):
+class student_infoConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'navigation'
+    name = 'student_info'

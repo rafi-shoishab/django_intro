@@ -1,14 +1,9 @@
-<!doctype html>
-{% load static %}
-<html>
-  <head>
-    <link rel="stylesheet" href="{% static "navigation/style.css" %}">
-  </head>
-  <body>
+{% extends "base.html" %}
 
-    {% include "navigation/include/header.html" %}
+{% block title %}
+about page
+{% endblock  %}
 
-    <h2>about page</h2>
-
-  </body>
-</html>
+{% block content %}
+<h2>welcome to about page</h2>
+{% endblock  %}

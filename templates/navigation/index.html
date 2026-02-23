@@ -1,15 +1,10 @@
-<!doctype html>
-{% load static %}
-<html>
-  <head>
-    <title>demo app</title>
-    <link rel="stylesheet" href="{% static "navigation/style.css" %}">
-  </head>
-  <body>
+{% extends "base.html" %}
 
-    {% include "navigation/include/header.html" %}
+{% block title %}
+home page
+{% endblock  %}
 
-    <h2>home page</h2>
 
-  </body>
-</html>
+{% block content %}
+<h2>welcome to home page</h2>
+{% endblock  %}

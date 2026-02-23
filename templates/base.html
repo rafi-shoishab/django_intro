@@ -1,0 +1,25 @@
+<!doctype html>
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static "navigation/style.css" %}">
+
+    {% block title %}
+
+    {% endblock %}
+
+
+  </head>
+  <body>
+
+    {% include "navigation/include/header.html" %}
+    
+    {% block content %}
+    
+    {% endblock %}
+    
+    {% include "navigation/include/footer.html" %}
+
+  </body>
+
+</html>
