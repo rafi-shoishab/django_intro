@@ -24,29 +24,31 @@ By working with this project, you will learn:
 
 ## 🏗 Project Structure Overview
 
-
+```
 django-intro-template-admin-media/
 │
 ├── core/
-│ ├── settings.py # Project settings (MEDIA_ROOT, MEDIA_URL)
-│ ├── urls.py # URL routing
-│ └── wsgi.py
+│   ├── settings.py        # Project settings (MEDIA_ROOT, MEDIA_URL)
+│   ├── urls.py            # URL routing
+│   ├── wsgi.py
+│   └── asgi.py
 │
-├── navigation/ # Django app
-│ ├── models.py # Database models
-│ ├── admin.py # Admin panel customization
-│ ├── views.py
-│ ├── urls.py
-│ └── migrations/
+├── navigation/            # Django app
+│   ├── models.py          # Database models
+│   ├── admin.py           # Admin panel customization
+│   ├── views.py
+│   ├── urls.py
+│   └── migrations/
 │
-├── templates/ # HTML templates
-│ └── include/
+├── templates/             # HTML templates
+│   └── include/
 │
-├── static/ # Static files (CSS, JS)
-├── media/ # Uploaded files (images)
+├── static/                # Static files (CSS, JS)
+├── media/                 # Uploaded files (images)
 │
 ├── manage.py
 └── requirements.txt
+```
 
 
 ---
