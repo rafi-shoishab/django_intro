@@ -289,21 +289,35 @@ media/student_img/
 # 🔧 Git Workflow (Quick Guide)
 
 ## First Time
+
 git add .
+
 git commit -m "initial commit"
+
 git push -u origin main
 
 ## Daily Workflow
+
 git pull
+
 git add .
+
 git commit -m "update message"
+
 git push
-Recommended .gitignore
+
+### Recommended .gitignore
+
 .venv/
+
 venv/
+
 __pycache__/
+
 *.pyc
+
 db.sqlite3
+
 .DS_Store
 .vscode/
 media/
