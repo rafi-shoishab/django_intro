@@ -66,16 +66,17 @@ This project shows how:
 
 ---
 
-## ⚡ 1. Setup Django (Run Project)
+# ⚡ 1. Setup Django (Run Project)
 
 ## Clone Repository
+
 bash
 
 git clone https://github.com/rafi-shoishab/django-intro.git
 
-cd django-intro-template-admin-media
+cd django-intro
 
-Create Virtual Environment
+### Create Virtual Environment
 
 Mac / Linux
 
@@ -100,12 +101,12 @@ python manage.py runserver
 
 http://127.0.0.1:8000
 
-## 🌐 2. HTTP Response Implementation
+# 🌐 2. HTTP Response Implementation
 
-### Step 2.1 — Create Django App
+## Step 2.1 — Create Django App
 python manage.py startapp navigation
 
-### Step 2.2 — Register App
+## Step 2.2 — Register App
 
 📄 core/settings.py
 
@@ -114,16 +115,18 @@ INSTALLED_APPS = [
     'navigation',
 ]
 
-### Step 2.3 — Create View
+## Step 2.3 — Create View
 
 📄 navigation/views.py
 
+```
 from django.http import HttpResponse
 
 def hello(request):
     return HttpResponse("Hello Django")
+```
 
-### Step 2.4 — App URLs
+## Step 2.4 — App URLs
 
 📄 navigation/urls.py
 
@@ -136,7 +139,7 @@ urlpatterns = [
 ]
 ```
 
-### Step 2.5 — Project URLs
+## Step 2.5 — Project URLs
 
 📄 core/urls.py
 
@@ -154,9 +157,9 @@ Test:
 
 http://127.0.0.1:8000/hello/
 
-## 🎨 3. Template Rendering
+# 🎨 3. Template Rendering
 
-### Step 3.1 — Create Template
+## Step 3.1 — Create Template
 
 📄 templates/index.html
 
@@ -172,7 +175,7 @@ http://127.0.0.1:8000/hello/
 </html>
 ```
 
-### Step 3.2 — Configure Templates
+## Step 3.2 — Configure Templates
 
 📄 core/settings.py
 
@@ -186,7 +189,7 @@ TEMPLATES = [
 ]
 ```
 
-### Step 3.3 — Render Template
+## Step 3.3 — Render Template
 
 📄 navigation/views.py
 
@@ -196,6 +199,7 @@ from django.shortcuts import render
 def home(request):
     return render(request, "index.html")
 ```
+
 🔁 Django Request → Response Flow
 User Request
      ↓
@@ -207,19 +211,19 @@ Template Rendering
      ↓
 HTTP Response
 
-## 🛠 4. Django Admin Panel Exploration
+# 🛠 4. Django Admin Panel Exploration
 
-### Step 4.1 — Apply Migrations
+## Step 4.1 — Apply Migrations
 python manage.py migrate
 
-### Step 4.2 — Create Superuser
+## Step 4.2 — Create Superuser
 python manage.py createsuperuser
 
 Login:
 
 http://127.0.0.1:8000/admin/
 
-### 📦 Step 4.3 — Create Model
+## 📦 Step 4.3 — Create Model
 
 📄 navigation/models.py
 
@@ -240,7 +244,7 @@ class Students(models.Model):
         return self.name
 ```
 
-### 🧩 Step 4.4 — Register Model Using Decorator
+## 🧩 Step 4.4 — Register Model Using Decorator
 
 📄 navigation/admin.py
 
@@ -256,9 +260,9 @@ class StudentsAdmin(admin.ModelAdmin):
     ordering = ('id',)
 ```
 
-## 🖼 5. Media (Image Upload) Configuration
+# 🖼 5. Media (Image Upload) Configuration
 
-### Step 5.1 — Media Settings
+## Step 5.1 — Media Settings
 
 📄 core/settings.py
 
@@ -282,13 +286,14 @@ Uploaded images will be stored in:
 
 media/student_img/
 
-## 🔧 Git Workflow (Quick Guide)
+# 🔧 Git Workflow (Quick Guide)
 
-First Time
+## First Time
 git add .
 git commit -m "initial commit"
 git push -u origin main
-Daily Workflow
+
+## Daily Workflow
 git pull
 git add .
 git commit -m "update message"
@@ -303,7 +308,7 @@ db.sqlite3
 .vscode/
 media/
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 Rafiur Rahman Shoishab
 GitHub: https://github.com/rafi-shoishab
