@@ -127,21 +127,23 @@ def hello(request):
 
 📄 navigation/urls.py
 
+```
 from django.urls import path
 from . import views
 
 urlpatterns = [
     path('hello/', views.hello, name='hello'),
 ]
+```
 
 ### Step 2.5 — Project URLs
 
 📄 core/urls.py
 
+```
 from django.contrib import admin
 from django.urls import path, include
 
-```
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('navigation.urls')),
@@ -158,6 +160,7 @@ http://127.0.0.1:8000/hello/
 
 📄 templates/index.html
 
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -167,11 +170,13 @@ http://127.0.0.1:8000/hello/
     <h1>Hello Django Template 🎉</h1>
 </body>
 </html>
+```
 
 ### Step 3.2 — Configure Templates
 
 📄 core/settings.py
 
+```
 TEMPLATES = [
     {
         ...
@@ -179,16 +184,18 @@ TEMPLATES = [
         ...
     },
 ]
+```
 
 ### Step 3.3 — Render Template
 
 📄 navigation/views.py
 
+```
 from django.shortcuts import render
 
 def home(request):
     return render(request, "index.html")
-
+```
 🔁 Django Request → Response Flow
 User Request
      ↓
@@ -216,6 +223,7 @@ http://127.0.0.1:8000/admin/
 
 📄 navigation/models.py
 
+```
 from django.db import models
 
 class Students(models.Model):
@@ -230,10 +238,13 @@ class Students(models.Model):
 
     def __str__(self):
         return self.name
+```
+
 ### 🧩 Step 4.4 — Register Model Using Decorator
 
 📄 navigation/admin.py
 
+```
 from django.contrib import admin
 from .models import Students
 
@@ -243,6 +254,7 @@ class StudentsAdmin(admin.ModelAdmin):
     search_fields = ('name', 'std_id', 'email')
     list_filter = ('dept',)
     ordering = ('id',)
+```
 
 ## 🖼 5. Media (Image Upload) Configuration
 
@@ -250,18 +262,22 @@ class StudentsAdmin(admin.ModelAdmin):
 
 📄 core/settings.py
 
+```
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-Step 5.2 — Serve Media Files
+```
+
+## Step 5.2 — Serve Media Files
 
 📄 core/urls.py
 
+```
 from django.conf import settings
 from django.conf.urls.static import static
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+```
 Uploaded images will be stored in:
 
 media/student_img/
