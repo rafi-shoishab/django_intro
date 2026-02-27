@@ -84,14 +84,19 @@ source .venv/bin/activate
 
 Windows
 
-python -m venv .venv
+python -m venv .venv 
+
 .venv\Scripts\activate
-Install Dependencies
+
+### Install Dependencies
+
 pip install -r requirements.txt
-Run Development Server
+
+### Run Development Server
+
 python manage.py runserver
 
-Open browser:
+### Open browser:
 
 http://127.0.0.1:8000
 
@@ -136,10 +141,12 @@ urlpatterns = [
 from django.contrib import admin
 from django.urls import path, include
 
+```
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('navigation.urls')),
 ]
+```
 
 Test:
 
