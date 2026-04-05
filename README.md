@@ -255,7 +255,7 @@ import os
 TEMPLATES = [
 {
 ...
-'DIRS': [os.path.join(BASE_DIR, 'templates')],
+'DIRS': [ (BASE_DIR / 'templates')],
 ... 
 }
 ]
