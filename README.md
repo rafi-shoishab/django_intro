@@ -132,6 +132,16 @@ This section explains how to return a simple HTTP response in Django.
 
 ---
 
+### Step 2.0 — Create Django Project
+
+```
+django-admin startproject core 
+```
+
+---
+
+---
+
 ### Step 2.1 — Create Django App
 
 ```
